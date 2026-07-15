@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:instagramtool
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+  h2:
+    console:
+      enabled: true
+
+claude:
+  api-key: ${CLAUDE_API_KEY:}
+  model: claude-sonnet-4-20250514
+  base-url: https://api.anthropic.com
+  max-tokens: 1024
+
+server:
+  port: 8080
